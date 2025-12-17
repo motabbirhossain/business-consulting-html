@@ -4,6 +4,8 @@
     --rb-base-rgb: #{toRGB(#4C5DEF)};
     --rb-secondary: #708BFD;
     --rb-secondary-rgb: #{toRGB(#708BFD)};
+    --rb-blue: #5163FF;
+    --rb-blue-rgb: #{toRGB(#5163FF)};
     --rb-black: #00234B;
     --rb-black-rgb: #{toRGB(#00234B)};
     --rb-white: #fff;
@@ -24,6 +26,8 @@ $rb-base: var(--rb-base);
 $rb-base-rgb: var(--rb-base-rgb);
 $rb-secondary: var(--rb-secondary);
 $rb-secondary-rgb: var(--rb-secondary-rgb);
+$rb-blue: var(--rb-blue);
+$rb-blue-rgb: var(--rb-blue-rgb);
 $rb-black: var(--rb-black);
 $rb-black-rgb: var(--rb-black-rgb);
 $rb-white: var(--rb-white);

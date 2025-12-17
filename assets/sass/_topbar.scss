@@ -1,0 +1,123 @@
+.topbar{
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: inset 0px 20px 46px #F1F3FF, inset 2.25px -7px 44px #F1F3FF;
+    border-radius: 10px;
+    padding: 19px 30px;
+    @include devices(md){
+        display: flex;
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        li{
+            line-height: normal;
+        }
+        a{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: $rb-text;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.4s ease-in-out;
+            &:hover{
+                color: $rb-base;
+            }
+        }
+        li + li{
+            margin-left: 15px;
+            padding-left: 15px;
+            border-left: 1px solid rgba(42, 48, 61, 0.15);
+        }
+    }
+    &__right{
+        display: flex;
+        align-items: center;
+        .language-info + .topbar__social{
+            margin-left: 15px;
+            padding-left: 15px;
+            border-left: 1px solid rgba(42, 48, 61, 0.15);
+        }
+    }
+
+    &__social{
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        a{
+            font-size: 14px;
+            color: $rb-text;
+            transition: all 0.4s ease-in-out;
+            &:hover{
+                color: $rb-blue;
+            }
+        }
+    }
+}
+
+
+.language-info__btn{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    transition: all 0.4s ease-in-out;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $rb-text;
+    padding-right: 17px;
+    &::after{
+        content: '\e90c';
+        font-family: 'icomoon' !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transition: all 0.4s ease-in-out;
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 22px;
+        color: $rb-text;
+    }
+}
+
+.language-info {
+    position: relative;
+    &__dropdown {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 11px);
+        width: 150px;
+        background-color: $rb-white;
+        padding: 10px 15px;
+        z-index: 99;
+        display: none;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    &__dropdown a {
+        display: flex;
+        align-items: center;
+        position: relative;
+        gap: 5px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $rb-text;
+        transition: all 0.4s ease-in-out;
+        padding: 7px 10px;
+        border-radius: 5px;
+    }
+
+    &__dropdown a:hover {
+        color: $rb-base;
+        box-shadow: inset 0px 20px 46px #F1F3FF, inset 2.25px -7px 44px #F1F3FF;
+    }
+}
