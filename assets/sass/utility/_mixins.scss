@@ -1,0 +1,54 @@
+@use "sass:color";
+
+@mixin devices($breakpoint) {
+  @if $breakpoint==sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
+@mixin borderHover {
+  background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+  transition: all 500ms ease;
+
+  &:hover {
+    background-size: 100% 1px;
+  }
+}
+
+@function toRGB($color) {
+  $red_color: color.channel($color, "red", $space: rgb);
+  $green_color: color.channel($color, "green", $space: rgb);
+  $blue_color: color.channel($color, "blue", $space: rgb);
+  @return $red_color+", "+$green_color+", "+$blue_color;
+}
+
+@mixin svgMask($svg, $repeat: no-repeat, $position: top center, $size: auto) {
+  -webkit-mask: url("data:image/svg+xml;utf8,#{$svg}");
+  mask: url("data:image/svg+xml;utf8,#{$svg}");
+  -webkit-mask-repeat: $repeat;
+  mask-repeat: $repeat;
+  -webkit-mask-position: $position;
+  mask-position: $position;
+  -webkit-mask-size: $size;
+  mask-size: $size;
+}

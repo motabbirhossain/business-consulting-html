@@ -1,0 +1,253 @@
+.sidebar{
+    @include devices(xl){
+        margin-left: 23px;
+    }
+    .widget-area{
+        border: 1px solid #DFDFDF;
+        background-color: $rb-white;
+        padding: 40px 30px;
+    }
+    .sidebar__single{
+        position: relative;
+        z-index: 1;
+        background-color: #F6F6F6;
+        border: 1px solid #DFDFDF;
+        border-radius: 10px;
+        padding: 33px 30px;
+        &__search{
+            position: relative;
+            z-index: 1;
+            padding: 30px 34px;
+        }
+    }
+    .sidebar__single-two{
+        border: 1px solid #DFDFDF;
+        border-radius: 10px;
+    }
+
+    .sidebar__search{
+        position: relative;
+        input[type="text"]{
+            border: none;
+            outline: none;
+            border-radius: 100px;
+            background-color: $rb-white;
+            height: 50px;
+            width: 100%;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 156%;
+            text-transform: capitalize;
+            color: #696767;
+            padding-left: 25px;
+        }
+        button{
+            position: absolute;
+            border: none;
+            outline: none;
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+            font-size: 20px;
+            font-weight: 600;
+            top: 0;
+            line-height: 50px;
+            right: 17px;
+            transition: all 0.4s ease-in-out;
+            &:hover{
+                color: $rb-base;
+            }
+        }
+    }
+
+    .sidebar__single + .sidebar__single{
+        margin-top: 30px;
+    }
+
+    .sidebar__single + .sidebar__single-two{
+        margin-top: 30px;
+    }
+
+    &__title{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 125%;
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 20px;
+        padding-left: 20px;
+    }
+
+    &__categories{
+        margin-bottom: 0;
+        a{
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 195%;
+            text-transform: capitalize;
+            color: #000000;
+            position: relative;
+            z-index: 1;
+            border-radius: 3px;
+            transition: all 0.4s ease-in-out;
+            overflow: hidden;
+            i{
+                color: $rb-text;
+                transition: all 0.4s ease-in-out;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #000000;
+                transform: translateX(-100%);
+                transition: all 0.4s ease-in-out;
+                z-index: -1;
+            }
+            &:hover{
+                color: $rb-white;
+                padding-left: 30px;
+                i{
+                    color: $rb-white;
+                }
+                &::after{
+                    transform: translateX(0);
+                }
+            }
+        }
+        li + li {
+            margin-top: 7px;
+        }
+    }
+
+    &__posts{
+        margin-bottom: 0;
+        &__item{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        &__item + &__item{
+            margin-top: 16px;
+        }
+        &__image{
+            max-width: 69px;
+            width: 100%;
+            height: 85px;
+            border: 1px solid #DFDFDF;
+            border-radius: 30px;
+            img{
+                object-fit: cover;
+                width: 100%;
+                border-radius: 30px;
+            }
+        }
+        &__title{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+            text-transform: capitalize;
+            color: #000000;
+            margin-bottom: 0;
+            a{
+                color: inherit;
+                @include borderHover;
+                &:hover{
+                    color: $rb-base;
+                }
+            }
+        }
+        &__meta{
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 100%;
+            text-transform: capitalize;
+            color: #000000;
+            padding: 5px 10px;
+            border-radius: 100px;
+            border: 1px solid #DFDFDF;
+            display: inline-flex;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__tags{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px 5px;
+        a{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 100%;
+            text-align: center;
+            text-transform: capitalize;
+            color: #000000;
+            opacity: 0.8;
+            border-radius: 5px;
+            padding: 11px 15px;
+            background-color: $rb-white;
+            transition: all 0.4s ease-in-out;
+            &:hover{
+                color: $rb-white;
+                background-color: $rb-black;
+            }
+        }
+    }
+
+    &__help{
+        background-color: #F3EDE9;
+        padding: 52px 40px 60px;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 1;
+        text-align: center;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            right: 126px;
+            background: #FFFFFF;
+            background-blend-mode: soft-light;
+            border: 1px solid #DFDFDF;
+            border-radius: 10px 70px 70px 10px;
+            z-index: -1;
+        }
+        &__title{
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 112%;
+            text-align: center;
+            text-transform: capitalize;
+            color: #010212;
+            text-align: center;
+            font-family: $rb-font;
+            margin-bottom: 20px;
+        }
+        &__text{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 167%;
+            text-align: center;
+            text-transform: capitalize;
+            color: #000000;
+            margin-bottom: 40px;
+        }
+
+        .rb-btn{
+            background-color: #000000;
+            span{
+                background-color: $rb-base;
+            }
+        }
+    }
+}

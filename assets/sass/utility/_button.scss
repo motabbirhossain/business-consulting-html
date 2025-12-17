@@ -1,0 +1,68 @@
+@mixin rbBtn($bgColor: $rb-base, $color: $rb-white) {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    border: none;
+    outline: none !important;
+    background-color: $bgColor;
+    color: $color;
+    transition: 500ms;
+    padding: 18px 41px;
+    font-family: $rb-font;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 1000px;
+    text-transform: capitalize;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 161%;
+    letter-spacing: -0.01em;
+    color: #FFFFFF;
+    text-shadow: 1px 2px 1px rgba(12, 4, 66, 0.3);
+
+}
+
+.rb-btn {
+    @include rbBtn;
+    >i {
+        font-style: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        perspective: 300px;
+        transition: transform 500ms ease;
+        transform-origin: top center;
+        transform: translateY(0%) translateZ(0px) scaleY(1) rotateX(0deg);
+    }
+
+    &:hover>i {
+        transform-origin: bottom center;
+        transform: translateY(-100%) translateZ(150px) scaleY(0) rotateX(90deg);
+    }
+
+    >span {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 700ms ease, top 700ms ease;
+        background-color: $rb-black;
+        transform: translateY(0%) translateZ(150px) scaleY(0) rotateX(90deg);
+        perspective: 300px;
+        transform-origin: bottom center;
+    }
+
+    &:hover>span {
+        transition: transform 500ms ease, top 500ms ease;
+        transform: translateY(0%) translateZ(0px) scaleY(1) rotateX(0deg);
+    }
+}

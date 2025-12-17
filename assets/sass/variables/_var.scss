@@ -1,0 +1,34 @@
+:root {
+    --rb-font: "Inter", sans-serif;
+    --rb-base: #4C5DEF;
+    --rb-base-rgb: #{toRGB(#4C5DEF)};
+    --rb-secondary: #708BFD;
+    --rb-secondary-rgb: #{toRGB(#708BFD)};
+    --rb-black: #00234B;
+    --rb-black-rgb: #{toRGB(#00234B)};
+    --rb-white: #fff;
+    --rb-white-rgb: #{toRGB(#fff)};
+    --rb-text: #838A95;
+    --rb-text-rgb: #{toRGB(#838A95)};
+    --rb-accent: #FE71B9;
+    --rb-accent-rgb: #{toRGB(#FE71B9)};
+    
+    --rb-gradient1: linear-gradient(90deg, #5163FF 12.38%, #C872F2 35.8%, #FE71B9 55.75%);
+    --rb-gradient2: linear-gradient(180deg, #708BFD 0%, #FE71B9 100%);
+    --rb-gradient3: linear-gradient(90deg, #708BFD 0%, #FE71B9 100%);
+
+}
+
+$rb-font: var(--rb-font);
+$rb-base: var(--rb-base);
+$rb-base-rgb: var(--rb-base-rgb);
+$rb-secondary: var(--rb-secondary);
+$rb-secondary-rgb: var(--rb-secondary-rgb);
+$rb-black: var(--rb-black);
+$rb-black-rgb: var(--rb-black-rgb);
+$rb-white: var(--rb-white);
+$rb-white-rgb: var(--rb-white-rgb);
+$rb-text: var(--rb-text);
+$rb-text-rgb: var(--rb-text-rgb);
+$rb-accent: var(--rb-accent);
+$rb-accent-rgb: var(--rb-accent-rgb);

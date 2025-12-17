@@ -1,0 +1,104 @@
+.form-one {
+    &__group {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
+        margin: 0;
+
+        @media (min-width: 576px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    label {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1;
+        text-transform: capitalize;
+        color: $rb-black;
+        cursor: pointer;
+        margin: 0 0 18px;
+    }
+
+    &__control {
+        border: none;
+        width: auto;
+        height: auto;
+        border-radius: 0;
+        padding: 0;
+        position: relative;
+
+        &__icon {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            font-size: 14px;
+        }
+
+        &--full {
+            grid-column-start: 1;
+            grid-column-end: -1;
+        }
+    }
+
+    .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+        width: 100%;
+        height: 58px;
+        display: flex;
+        align-items: center;
+    }
+
+    .bootstrap-select>.dropdown-toggle {
+        padding: 0;
+        background-color: transparent;
+        border-radius: 0;
+        border: none;
+        outline: none !important;
+        color: $rb-text;
+        font-size: 14px;
+    }
+
+    .bootstrap-select>.dropdown-toggle,
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        display: block;
+        width: 100%;
+        height: 60px;
+        background-color: $rb-text;
+        color: $rb-text;
+        font-size: 14px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 25px;
+        border: none;
+        border-radius: 0px;
+        outline: none;
+        font-family: $rb-font;
+        transition: all 500ms ease;
+        padding: 0 30px;
+
+        &:focus {
+            color: $rb-black;
+            font-weight: 500;
+            border-color: $rb-white;
+        }
+    }
+
+    textarea {
+        height: 185px;
+        padding-top: 20px;
+    }
+
+    .bootstrap-select>.dropdown-toggle {
+        display: flex;
+        align-items: center;
+
+        .filter-option {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
