@@ -1,0 +1,153 @@
+.footer-area{
+    background-color: #0C0129;
+    padding: 98px 0 63px;
+    position: relative;
+    &__ring-one{
+        position: absolute;
+        top: 20%;
+        left: 0;
+        img{
+            object-fit: cover;
+            filter: blur(17.5px);
+        }
+    }
+    &__ring-two{
+        position: absolute;
+        bottom: 20%;
+        right: 0;
+        img{
+            object-fit: cover;
+            filter: blur(17.5px);
+        }
+    }
+
+    &__top{
+
+    }
+
+    &__box{
+        background: linear-gradient(145.12deg, rgba(254, 113, 185, 0.04) -2.12%, rgba(20, 2, 73, 0.01) 121.13%);
+        box-shadow: inset 0px 20px 122px rgba(19, 7, 150, 0.08), inset 2.24982px -7px 43.7px rgba(255, 255, 255, 0.02);
+        border-radius: 10px;
+        padding: 37px 40px 40px;
+    }
+    
+}
+
+
+.footer-widget{
+    &__logo{
+        margin-bottom: 23px;
+        a{
+            display: block;
+        }
+    }
+    &__text{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        color: $rb-white;
+        opacity: 0.9;
+        margin-bottom: 19px;
+    }
+    &__time{
+        margin-bottom: 26px;
+        &__subtitle{
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 175%;
+            color: $rb-white;
+            opacity: 0.6;
+            margin-bottom: 3px;
+        }
+        &__available{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 178%;
+            color: $rb-white;
+            margin-bottom: 0;
+        }
+    }
+    &__social{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        a{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba($rb-white-rgb, 0.1);
+            border-radius: 10px;
+            font-size: 14px;
+            color: rgba($rb-white-rgb, 0.4);
+            transition: all 0.4s ease-in-out;
+            position: relative;
+            z-index: 1;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 100px;
+                background: linear-gradient(102.44deg, $rb-blue -0.32%, $rb-accent 100%);
+                z-index: -1;
+                transform: scale(0.2);
+                visibility: hidden;
+                opacity: 0;
+                transition: all 0.4s ease-in-out;
+            }
+            &:hover{
+                color: $rb-white;
+                transform: translateY(-3px);
+                &::after{
+                    visibility: visible;
+                    opacity: 1;
+                    transform: scale(1.0);
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+
+    &__title{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 150%;
+        letter-spacing: -0.01em;
+        color: $rb-white;
+        margin-bottom: 30px;
+        text-transform: capitalize;
+    }
+
+    &__links{
+        li{
+            a{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 175%;
+                color: rgba($rb-white-rgb, 0.9);
+                transition: all 0.4s ease-in-out;
+                i{
+                    font-size: 0;
+                    transition: all 0.4s ease-in-out;
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                &:hover{
+                    background: linear-gradient(102.44deg, #5163FF -0.32%, #FE71B9 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                }
+            }
+        }
+        li + li{
+            margin-top: 12px;
+        }
+    }
+}

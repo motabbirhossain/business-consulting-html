@@ -53,6 +53,10 @@ p {
             display: none;
         }
     }
+    @media (max-width:575px) {
+        font-size: 16px;
+        line-height: 167%;
+    }
 }
 
 ::placeholder {
@@ -78,6 +82,13 @@ p {
 .row {
     --bs-gutter-x: 30px;
 }
+.gutter-y-10 {
+    --bs-gutter-y: 10px;
+}
+
+.gutter-x-10 {
+    --bs-gutter-x: 10px;
+}
 
 .gutter-y-30 {
     --bs-gutter-y: 30px;
@@ -93,5 +104,43 @@ p {
     .dropdown-item.active,
     .dropdown-item:active {
         background-color: $rb-base;
+    }
+}
+
+
+.sec-title{
+    margin-bottom: 70px;
+    &__subtitle{
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 186%;
+        letter-spacing: -0.01em;
+        color: $rb-white;
+        margin-bottom: 0;
+        padding: 6px 14px;
+        background: linear-gradient(90deg, $rb-secondary 0%, $rb-accent 100%);
+        box-shadow: inset 0px -4px 18.5px rgba($rb-white-rgb, 0.79);
+        border-radius: 48px;
+        margin-bottom: 20px;
+        i{
+            font-size: 15px;
+        }
+    }
+    &__title{
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 125%;
+        letter-spacing: -0.01em;
+        color: $rb-black;
+        margin-bottom: 0;
+        @media (max-width:767px) {
+            font-size: 40px;
+        }
+        @media (max-width:575px) {
+            font-size: 35px;
+        }
     }
 }
