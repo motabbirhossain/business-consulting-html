@@ -155,8 +155,25 @@
         });
     }
 
+    function rbSlickInit() {
+        let rbslickCarousel = $(".rb-slick__carousel");
+        if (rbslickCarousel.length) {
+            rbslickCarousel.each(function () {
+                let elm = $(this);
+                let options = elm.data("slick-options");
+                let rbslickCarousel = elm.slick(
+                    "object" === typeof options ? options : JSON.parse(options)
+                );
+            });
+        }
+    }
+
     $(document).ready(function () {
         counterUp();
+    });
+
+    $(window).on("load", function () {
+        rbSlickInit();
     });
 
 })(jQuery);
