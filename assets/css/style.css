@@ -1150,6 +1150,120 @@ body.megamenu-popup-active .mobile-nav__content {
 # CTA
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
+# Funfact
+--------------------------------------------------------------*/
+.funfact-area {
+  position: relative;
+  padding-bottom: 100px;
+}
+@media (max-width: 767px) {
+  .funfact-area {
+    padding-bottom: 80px;
+  }
+}
+@media (max-width: 575px) {
+  .funfact-area {
+    padding-bottom: 60px;
+  }
+}
+.funfact-area__inner {
+  display: flex;
+  align-items: center;
+  gap: 91px;
+}
+@media (max-width: 1392px) {
+  .funfact-area__inner {
+    gap: 30px;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+  .funfact-area__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.funfact-area__inner li {
+  flex: 200px;
+  width: 200px;
+}
+@media (max-width: 1199px) {
+  .funfact-area__inner li {
+    flex: calc(20% - 15px);
+    width: calc(20% - 15px);
+  }
+}
+@media (max-width: 768px) {
+  .funfact-area__inner li {
+    flex: calc(33% - 15px);
+    max-width: calc(33% - 15px);
+    width: 100%;
+  }
+}
+.funfact-area__item {
+  position: relative;
+  z-index: 1;
+  padding-top: 15px;
+}
+.funfact-area__item__count {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: var(--rb-black);
+  margin-bottom: 10px;
+}
+@media (max-width: 991px) {
+  .funfact-area__item__count {
+    font-size: 50px;
+  }
+}
+.funfact-area__item__count .odometer__characters {
+  font-size: 50px;
+  line-height: 160%;
+  display: block;
+  margin-bottom: -10px;
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .funfact-area__item__count .odometer__characters {
+    font-size: 30px;
+  }
+}
+.funfact-area__item__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #838A95;
+  margin-bottom: 0;
+}
+.funfact-area__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--rb-black);
+  height: 2px;
+  opacity: 15%;
+}
+.funfact-area__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  background-color: var(--rb-base);
+  height: 2px;
+  transition: all 0.4s ease-in-out;
+}
+.funfact-area__item:hover::before {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
 @media (min-width: 1200px) {

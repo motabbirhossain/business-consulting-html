@@ -22,8 +22,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/vendors/animate/animate.min.css">
-    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css">
     <link rel="stylesheet" href="assets/vendors/icomoon/style.css">
+    <link rel="stylesheet" href="assets/vendors/odometer/odometer.css">
     <link rel="stylesheet" href="assets/vendors/slick/slick.css">
 
     <!-- template styles -->
@@ -71,7 +71,14 @@
                     <div class="main-header__logo d-block d-xl-none"> <a href="index.html"><img src="assets/images/logo-dark.png" alt="rb HTML" width="200"></a></div>
                     <nav class="main-header__nav main-menu">
                         <ul class="main-menu__list">
-                            <li class="dropdown megamenu"><a href="index.html">Home <i class="icon-angle-down"></i></a></li>
+                            <li class="dropdown">
+                                <a href="index.html">Home <i class="icon-angle-down"></i></a>
+                                <ul>
+                                    <li><a href="#">Home One</a></li>
+                                    <li><a href="#">Home Two</a></li>
+                                    <li><a href="#">Home Three</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#">About</a></li>
                             <li><a href="#">Services</a></li>
                             <li class="dropdown">
@@ -162,7 +169,32 @@
                 <ul class="funfact-area__inner list-unstyled">
                     <li>
                         <div class="funfact-area__item">
-                            
+                            <h2 class="funfact-area__item__count"><span class="odometer" data-duration="5000" data-count="99">0</span> <span class="odometer__characters">%</span></h2>
+                            <p class="funfact-area__item__text">Business Strategy</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="funfact-area__item">
+                            <h2 class="funfact-area__item__count"><span class="odometer" data-duration="5000" data-count="80">0</span> <span class="odometer__characters">%</span></h2>
+                            <p class="funfact-area__item__text">Targeted Acquisition</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="funfact-area__item">
+                            <h2 class="funfact-area__item__count"><span class="odometer" data-duration="5000" data-count="62">0</span><span>k</span> <span class="odometer__characters">+</span></h2>
+                            <p class="funfact-area__item__text">Complete Projects</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="funfact-area__item">
+                            <h2 class="funfact-area__item__count"><span class="odometer" data-duration="5000" data-count="15">0</span> <span>k</span> <span class="odometer__characters">+</span></h2>
+                            <p class="funfact-area__item__text">Happy Customers</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="funfact-area__item">
+                            <h2 class="funfact-area__item__count"><span class="odometer" data-duration="5000" data-count="100">0</span> <span class="odometer__characters">+</span></h2>
+                            <p class="funfact-area__item__text">Consultant Advisors</p>
                         </div>
                     </li>
                 </ul>
@@ -294,11 +326,12 @@
 
     <!-- Vendor JS Files -->
     <script src="assets/vendors/jquery/jquery-3.7.1.min.js"></script>
+    <script src="assets/vendors/jquery-appear/jquery-appear.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/odometer/odometer.js"></script>
     <script src="assets/vendors/wow/wow.js"></script>
-    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="assets/vendors/slick/slick.min.js"></script>
-    <script src="assets/vendors/countdown/countdown.min.js"></script>
+    <script src="assets/vendors/slick/slick.min.js"></script>
 
     <!-- gsap js -->
     <!-- <script src="assets/vendors/gsap/gsap.js"></script>

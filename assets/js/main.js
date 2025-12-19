@@ -134,4 +134,29 @@
             $("body").toggleClass("locked");
         });
     }
+
+    function counterUp() {
+        if (!$(".odometer").length) return;
+
+        $(".odometer").each(function () {
+            var $this = $(this);
+
+            $this.appear(function () {
+            if ($this.hasClass("counted")) return;
+
+            window.odometerOptions = {
+                duration: $this.data("duration") || 2000,
+                animation: 'count'
+            };
+
+            $this.html($this.data("count"));
+            $this.addClass("counted");
+            });
+        });
+    }
+
+    $(document).ready(function () {
+        counterUp();
+    });
+
 })(jQuery);
