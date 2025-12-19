@@ -1,0 +1,47 @@
+.text-slider{
+    position: relative;
+    background: linear-gradient(90deg, #708BFD 0%, #FE71B9 100%);
+    padding: 19px 0;
+    &__item{
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        font-weight: 700;
+        font-size: 61.6px;
+        line-height: 100%;
+        text-transform: uppercase;
+        opacity: 0.8;
+        color: transparent;
+        -webkit-text-stroke: 1px $rb-white;
+        img{
+            animation: rotate 10s linear infinite;
+        }
+    }
+    &__inner{
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        animation: textScrolling 25s linear infinite;
+        animation-direction: reverse;
+        will-change: transform;
+        position: relative;
+        white-space: nowrap;
+        z-index: 1;
+    }
+    &__shape{
+        &__image-one{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: rotate(1deg);
+            z-index: -1;
+        }
+        &__image-two{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: rotate(-1deg);
+            z-index: -1;
+        }
+    }
+}
