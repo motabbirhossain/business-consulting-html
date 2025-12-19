@@ -8,6 +8,9 @@
     @include devices(md){
         display: flex;
     }
+    @media (max-width:991px) {
+        padding: 10px 20px;
+    }
     &__info{
         display: flex;
         align-items: center;

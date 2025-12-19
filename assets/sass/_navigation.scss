@@ -10,7 +10,6 @@
         display: flex;
         align-items: center;
         background-color: transparent;
-        border-radius: 5px;
         position: relative;
         border-bottom: 1px solid rgba($rb-black-rgb, 0.15);
         @media (max-width: 1199px) {
@@ -22,25 +21,57 @@
         display: flex;
         height: 100%;
         width: auto;
+        @media (max-width:1199px) {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media (max-width:767px) {
+            margin-left: auto;
+            margin-right: 0;
+        }
     }
 
     &__nav {
         margin-left: auto;
         margin-right: auto;
+        @media (max-width:1199px) {
+            display: none;
+        }
     }
 
     &__left{
         display: flex;
         align-items: center;
+        .sidebar-nav__btn+ .quick-access,
         .mobile-nav__btn + .quick-access{
             margin-left: 15px;
             padding-left: 15px;
             border-left: 1px solid rgba($rb-black-rgb, 0.15);
         }
     }
+    .mobile-nav__btn,
+    .sidebar-nav__btn{
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+        color: $rb-text;
+        position: relative;
+        line-height: 100%;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        transition: all 0.4s ease-in-out;
+        &:hover{
+            color: $rb-base;
+        }
+    }
     .quick-access{
         display: flex;
         align-items: center;
+        @media (max-width:425px) {
+            display: none;
+        }
         &__trolley,
         &__search{
             padding: 0;
@@ -52,6 +83,10 @@
             border: none;
             outline: none;
             background-color: transparent;
+            transition: all 0.4s ease-in-out;
+            &:hover{
+                color: $rb-base;
+            }
         }
         .quick-access__trolley + .quick-access__search{
             margin-left: 26px;
@@ -84,6 +119,11 @@
             font-size: 14px;
             line-height: 143%;
             letter-spacing: -0.01em;
+        }
+    }
+    .main-header__right{
+        @media (max-width:767px) {
+            display: none;
         }
     }
 }
@@ -216,22 +256,6 @@
         text-transform: capitalize;
         padding: 8px 20px;
         transition: 400ms;
-
-        &::after {
-            position: absolute;
-            right: 20px;
-            top: 8px;
-            border-radius: 0;
-            font-size: 12px;
-            font-weight: 600;
-            font-family: "Font Awesome 5 Free";
-            content: "\f054";
-            color: $rb-white;
-            visibility: hidden;
-            opacity: 0;
-            transition: all 500ms ease;
-            transform: scale(0);
-        }
     }
 
     .main-menu__list li ul li.current>a,

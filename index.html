@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="assets/vendors/animate/animate.min.css">
     <link rel="stylesheet" href="assets/vendors/icomoon/style.css">
     <link rel="stylesheet" href="assets/vendors/odometer/odometer.css">
+    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css">
     <link rel="stylesheet" href="assets/vendors/slick/slick.css">
 
     <!-- template styles -->
@@ -32,12 +33,13 @@
 </head>
 <body class="body-wrapper">
     <div class="page-wrapper">
+        <!-- Header Section -->
         <header class="main-header">
             <div class="container">
                 <div class="topbar">
                     <div class="topbar__left">
                         <ul class="topbar__info list-unstyled">
-                            <li><a href="#"><i class=""></i> 15th Street, USA</a></li>
+                            <li><a href="#"><i class="icon-location-pin"></i> 15th Street, USA</a></li>
                             <li><a href="#"><i class="icon-massage"></i> support@gamil.com</a></li>
                         </ul>
                     </div>
@@ -62,10 +64,11 @@
                 </div>
                 <div class="main-header__inner">
                     <div class="main-header__left">
-                        <div class="mobile-nav__btn mobile-nav__toggler"><i class="icon-navbar"></i></div>
+                        <button class="mobile-nav__btn mobile-nav__toggler d-block d-xl-none"><i class="icon-navbar"></i></button>
+                        <button class="sidebar-nav__btn sidebar-nav__toggler d-none d-xl-block"><i class="icon-navbar"></i></button>
                         <div class="quick-access">
                             <a href="#" class="quick-access__trolley"><i class="icon-trolley"></i><span class="quick-access__trolley__badge">02</span></a>
-                            <button class="quick-access__search"><i class="icon-search"></i></button>
+                            <button class="quick-access__search search-toggler"><i class="icon-search"></i></button>
                         </div>
                     </div>
                     <div class="main-header__logo d-block d-xl-none"> <a href="index.html"><img src="assets/images/logo-dark.png" alt="rb HTML" width="200"></a></div>
@@ -94,10 +97,8 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="dropdown"><a href="#">News</a></li>
-                            <li>
-                                <a href="#">Contact</a>
-                            </li>
+                            <li><a href="#">News</a></li>
+                            <li> <a href="#">Contact</a></li>
                         </ul>
                     </nav>
                     <div class="main-header__right">
@@ -108,7 +109,72 @@
                 </div>
             </div>
         </header>
-        <div class="text-slider">
+
+        <!-- Hero Section -->
+        <section class="hero-area">
+            <div class="container">
+                <div class="row gutter-y-30">
+                    <div class="col-lg-8">
+                        <div class="hero-area__content">
+                            <div class="hero-area__title__box wow fadeInLeft" data-wow-duration='1500ms' data-wow-delay='500ms'>
+                                <div class="hero-area__title__shape">
+                                    <img src="assets/images/shapes/hero-shape-1-2.png" alt="shape">
+                                </div>
+                                <div class="hero-area__title__roket">
+                                    <img src="assets/images/shapes/hero-shape-1-3.png" alt="shape">
+                                </div>
+                                <h2 class="hero-area__title">We shape the future of <span class="hero-area__title-heading">business</span> </h2>
+                            </div>
+                            <p class="hero-area__text wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>A business consultant is a professional who provides expert advice and guidance to businesses on various aspects such.</p>
+                            <div class="hero-area__btn wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
+                                <a href="#" class="rb-btn"><i>Explore more</i><span>Explore more</span></a>
+                                <div class="hero-area__call">
+                                    <div class="hero-area__call__icon">
+                                        <i class="icon-call"></i>
+                                    </div>
+                                    <div class="hero-area__call__content">
+                                        <span class="subtitle">Free Consultant</span>
+                                        <a href="tel:(406) 555-0120" class="call">(406) 555-0120</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-area__collaboration wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
+                                <div class="hero-area__collaboration__thumb">
+                                    <div class="hero-area__collaboration__thumb__item"><img src="assets/images/resources/man-1-1.png" alt="man"><a href="#" class="link"><i class="icon-add"></i></a></div>
+                                    <div class="hero-area__collaboration__thumb__item"><img src="assets/images/resources/man-1-2.png" alt="man"><a href="#" class="link"><i class="icon-add"></i></a></div>
+                                    <div class="hero-area__collaboration__thumb__item"><img src="assets/images/resources/man-1-3.png" alt="man"><a href="#" class="link"><i class="icon-add"></i></a></div>
+                                    <div class="hero-area__collaboration__thumb__item"><img src="assets/images/resources/man-1-4.png" alt="man"><a href="#" class="link"><i class="icon-add"></i></a></div>
+                                </div>
+                                <p class="hero-area__collaboration__text"><span>2.5K+</span> Business Peoples <br> Already Registered</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-area__thumb">
+                <div class="hero-area__thumb__item">
+                    <img src="assets/images/resources/hero-1-1.jpg" alt="hero image">
+                </div>
+                <div class="hero-area__thumb__video">
+                    <a href="https://www.youtube.com/watch?v=0MuL8fd3pb8" class="hero-area__video video-popup"><i class="icon-video"></i></a>
+                    <div class="hero-area__thumb__video__text-cercle">
+                        <img src="assets/images/shapes/hero-text-rotate.png" alt="text">
+                    </div>
+                </div>
+            </div>
+            <div class="hero-area__shape-one">
+                <img src="assets/images/shapes/hero-line-1-2.png" alt="shape">
+            </div>
+            <div class="hero-area__shape-two">
+                <img src="assets/images/shapes/hero-line-1-1.png" alt="shape">
+            </div>
+            <div class="hero-area__shape-three">
+                <img src="assets/images/shapes/hero-shape-1-1.png" alt="shape">
+            </div>
+        </section>
+
+        <!-- Text-Slider Section -->
+        <div class="text-slider wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
             <div class="text-slider__inner">
                 <div class="text-slider__item"> <img src="assets/images/shapes/slider-shape-1-1.png" alt="icon">CREATIVE</div>
                 <div class="text-slider__item"> <img src="assets/images/shapes/slider-shape-1-2.png" alt="icon"> Solutions</div>
@@ -125,15 +191,16 @@
             </div>
         </div>
 
+        <!-- About Section -->
         <section class="about-area">
             <div class="container">
                 <div class="row gutter-y-30">
                     <div class="col-lg-6">
                         <div class="about-area__thumb">
-                            <div class="about-area__thumb__item">
+                            <div class="about-area__thumb__item bw-img-anim-left">
                                 <img src="assets/images/about/about-1-1.jpg" alt="abut image">
                             </div>
-                            <div class="about-area__thumb__item-small">
+                            <div class="about-area__thumb__item-small bw-img-anim-left">
                                 <img src="assets/images/about/about-s-1-1.jpg" alt="abut image">
                             </div>
                             <div class="about-area__thumb__rotate">
@@ -150,15 +217,15 @@
                         <div class="about-area__content">
                             <div class="sec-title">
                                 <h4 class="sec-title__subtitle"><i class="icon-arrow-up"></i>Know about us</h4>
-                                <h2 class="sec-title__title">All-in-one web solution for your business</h2>
+                                <h2 class="sec-title__title bw-spilt-title-one">All-in-one web solution for your business</h2>
                             </div>
-                            <p class="about-area__text">We are creative agency, we are here to helping your business growth consectetur adipiscing.</p>
-                            <ul class="about-area__list list-unstyled">
+                            <p class="about-area__text wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>We are creative agency, we are here to helping your business growth consectetur adipiscing.</p>
+                            <ul class="about-area__list list-unstyled wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
                                 <li><span class="about-area__list__icon"></span> There are many variations of passages available</li>
                                 <li><span class="about-area__list__icon"></span> Majority have suffered alteration in some form</li>
                                 <li><span class="about-area__list__icon"></span> Contrary to popular belief is not simply random</li>
                             </ul>
-                            <div class="about-area__bottom">
+                            <div class="about-area__bottom wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
                                 <a href="#" class="rb-btn about-area__btn"><i>More about us</i><span>More about us</span></a>
                                 <div class="about-area__author">
                                     <div class="about-area__author__thumb">
@@ -180,7 +247,8 @@
             </div>
         </section>
 
-        <section class="funfact-area">
+        <!-- Funfact Section -->
+        <section class="funfact-area wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
             <div class="container">
                 <ul class="funfact-area__inner list-unstyled">
                     <li>
@@ -217,11 +285,12 @@
             </div>
         </section>
 
+        <!-- Service Section -->
         <section class="service-area">
             <div class="container">
                 <div class="sec-title text-center">
                     <h4 class="sec-title__subtitle"><i class="icon-arrow-up"></i>What We Do</h4>
-                    <h2 class="sec-title__title">Our Popular Services</h2>
+                    <h2 class="sec-title__title bw-spilt-title-one">Our Popular Services</h2>
                 </div>
                 <div class="service-area__inner">
                     <div class="service-area__item">
@@ -278,7 +347,8 @@
             </div>
         </section>
 
-        <section class="testimonials-area">
+        <!-- Testimonials Section -->
+        <section class="testimonials-area wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms'>
             <div class="container">
                 <div class="testimonials-area__thumb">
                     <div class="testimonials-area__thumb-carousel rb-slick__carousel" 
@@ -292,7 +362,15 @@
                             "centerMode": true,
                             "centerPadding": "0px",
                             "autoplay": false,
-                            "infinite": true
+                            "infinite": true,
+                            "responsive": [
+                                {
+                                    "breakpoint": 576,
+                                    "settings": {
+                                        "slidesToShow": 3
+                                    }
+                                }
+                            ]
                         }'>
                         <div class="testimonials-area__thumb-item">
                             <div class="thumb">
@@ -423,6 +501,7 @@
             <div class="testimonials-area__shape-two"></div>
         </section>
 
+        <!-- Footer Section -->
         <footer class="footer-area">
             <div class="container">
                 <div class="footer-area__top">
@@ -452,12 +531,12 @@
                                         <div class="footer-widget footer-widget--links-one">
                                             <h2 class="footer-widget__title">Quick Link</h2>
                                             <ul class="list-unstyled footer-widget__links">
-                                                <li><a href="#"><i class="icon-arrow-up1"></i> About Company</a></li>
-                                                <li><a href="#"><i class="icon-arrow-up1"></i> Strategy</a></li>
-                                                <li><a href="#"><i class="icon-arrow-up1"></i> Investor Presentation</a></li>
-                                                <li><a href="#"><i class="icon-arrow-up1"></i> Investor Career</a></li>
-                                                <li><a href="#"><i class="icon-arrow-up1"></i> Meet Our Team </a></li>
-                                                <li><a href="#"><i class="icon-arrow-up1"></i> Get in Touch</a></li>
+                                                <li><a href="#"><i class="icon-arrow-up3"></i> About Company</a></li>
+                                                <li><a href="#"><i class="icon-arrow-up3"></i> Strategy</a></li>
+                                                <li><a href="#"><i class="icon-arrow-up3"></i> Investor Presentation</a></li>
+                                                <li><a href="#"><i class="icon-arrow-up3"></i> Investor Career</a></li>
+                                                <li><a href="#"><i class="icon-arrow-up3"></i> Meet Our Team </a></li>
+                                                <li><a href="#"><i class="icon-arrow-up3"></i> Get in Touch</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -465,12 +544,12 @@
                                         <div class="footer-widget footer-widget--links-two">
                                             <h2 class="footer-widget__title">Our Services</h2>
                                             <ul class="list-unstyled footer-widget__links">
-                                                <li><a href="#"><i class="icon-arrow-up1"></i> Business Consulting</a></li>
-                                                <li><a href="#"><i class="icon-arrow-up1"></i> Finance Strategy</a></li>
-                                                <li><a href="#"><i class="icon-arrow-up1"></i> Investor Presentation</a></li>
-                                                <li><a href="#"><i class="icon-arrow-up1"></i> Investor Career</a></li>
-                                                <li><a href="#"><i class="icon-arrow-up1"></i> Marketing Analysis</a></li>
-                                                <li><a href="#"><i class="icon-arrow-up1"></i> Tax Preparation</a></li>
+                                                <li><a href="#"><i class="icon-arrow-up3"></i> Business Consulting</a></li>
+                                                <li><a href="#"><i class="icon-arrow-up3"></i> Finance Strategy</a></li>
+                                                <li><a href="#"><i class="icon-arrow-up3"></i> Investor Presentation</a></li>
+                                                <li><a href="#"><i class="icon-arrow-up3"></i> Investor Career</a></li>
+                                                <li><a href="#"><i class="icon-arrow-up3"></i> Marketing Analysis</a></li>
+                                                <li><a href="#"><i class="icon-arrow-up3"></i> Tax Preparation</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -548,25 +627,99 @@
         </footer>
     </div>
 
+    <!-- Mobile Nav -->
+    <div class="mobile-nav__wrapper">
+        <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+        <div class="mobile-nav__content">
+            <span class="mobile-nav__close mobile-nav__toggler"><i class="icon-add"></i></span>
+            <div class="logo-box">
+                <a href="index.html" aria-label="logo image"><img src="assets/images/logo-light.png" width="200" alt="logo"></a>
+            </div>
+            <div class="mobile-nav__container"></div>
+            <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                    <i class="icon-location-pin"></i>
+                    <a href="#">15th Street, USA</a>
+                </li>
+                <li>
+                    <i class="icon-call"></i>
+                    <a href="tel:666-888-0000">666 888 0000</a>
+                </li>
+            </ul>
+            <div class="mobile-nav__social">
+                <a href="https://facebook.com"><i class="icon-facbook"></i></a>
+                <a href="https://twitter.com"><i class="icon-twitter"></i></a>
+                <a href="https://instagram.com"><i class="icon-Instagram"></i></a>
+                <a href="https://linkdin.com"><i class="icon-linkdin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Side Bar -->
+    <div class="main-header-sidebar">
+        <div class="main-header-sidebar__overlay main-header-sidebar__toggler"></div>
+        <div class="main-header-sidebar__content">
+            <span class="main-header-sidebar__close main-header-sidebar__toggler"><i class="icon-add"></i></span>
+            <div class="main-header-sidebar__logo-box"> <a href="index.html" aria-label="logo image"><img src="assets/images/logo-light.png" width="200"  alt="logo"></a></div>
+            <div class="main-header-sidebar__container">
+                <div class="main-header-sidebar__container__about wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms'>
+                    <h3 class="main-header-sidebar__container__title">Changing Lives For The Better</h3>
+                    <p class="main-header-sidebar__container__text">In regions affected by conflict and disaster, access to healthcare and psychological support is crucial. We support initiatives that offer medical care, counseling, and emotional support to children and families. For example, in war-torn areas like Gaza and Israel,</p>
+                </div>
+                <div class="main-header-sidebar__container__contact">
+                    <h3 class="main-header-sidebar__container__title">Contact Us</h3>
+                    <ul class="main-header-sidebar__container__list list-unstyled">
+                        <li class="main-header-sidebar__container__list__item wow fadeInUp" data-wow-duration='1500ms'
+                            data-wow-delay='500ms'>
+                            <div class="main-header-sidebar__container__icon">
+                                <i class="icon-call"></i>
+                            </div>
+                            <div class="main-header-sidebar__container__list__content">
+                                <span class="main-header-sidebar__container__list__title">call agent</span>
+                                <a href="tel:+91-123-654-900">+91 123 654 900</a>
+                            </div>
+                        </li>
+                        <li class="main-header-sidebar__container__list__item wow fadeInUp" data-wow-duration='1500ms'
+                            data-wow-delay='700ms'>
+                            <div class="main-header-sidebar__container__icon">
+                                <i class="icon-location-pin"></i>
+                            </div>
+                            <div class="main-header-sidebar__container__list__content">
+                                <span class="main-header-sidebar__container__list__title">opening time</span>
+                                <p>Hours: Mon-Fri: 8am – 7pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Popup -->
+    <div class="search-popup">
+        <div class="search-popup__overlay search-toggler"></div>
+        <div class="search-popup__content">
+            <form role="search" class="search-popup__form" action="#">
+                <input type="text" id="search" placeholder="Search Here...">
+                <button type="submit" aria-label="search submit" class="rb-btn"><i class="icon-search"></i><span class="icon-search"></span></button>
+            </form>
+        </div>
+    </div>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendors/jquery/jquery-3.7.1.min.js"></script>
     <script src="assets/vendors/jquery-appear/jquery-appear.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendors/odometer/odometer.js"></script>
+    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="assets/vendors/wow/wow.js"></script>
     <script src="assets/vendors/slick/slick.min.js"></script>
 
     <!-- gsap js -->
-    <!-- <script src="assets/vendors/gsap/gsap.js"></script>
-    <script src="assets/vendors/gsap/ScrollSmoother.min.js"></script>
+    <script src="assets/vendors/gsap/gsap.js"></script>
     <script src="assets/vendors/gsap/scrolltrigger.min.js"></script>
-    <script src="assets/vendors/gsap/ScrollToPlugin.min.js"></script>
-    <script src="assets/vendors/gsap/TextPlugin.js"></script>
-    <script src="assets/vendors/gsap/splittext.min.js"></script>
-    <script src="assets/vendors/gsap/Flip.min.js"></script>
-    <script src="assets/vendors/gsap/customEase.js"></script>
-    <script src="assets/vendors/gsap/rb-split.js"></script> -->
+    <script src="./assets/vendors/gsap/splittext.min.js"></script>
+    <script src="assets/vendors/gsap/rb-split.js"></script>
 
     <!-- template js -->
     <script src="assets/js/main.js"></script>

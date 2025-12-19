@@ -11,41 +11,6 @@
         wow.init();
     }
 
-    if ($(".video-popup").length) {
-        $(".video-popup").magnificPopup({
-            type: "iframe",
-            mainClass: "mfp-fade",
-            removalDelay: 160,
-            preloader: true,
-
-            fixedContentPos: false,
-        });
-    }
-
-    if ($(".img-popup").length) {
-        var groups = {};
-        $(".img-popup").each(function () {
-            var id = parseInt($(this).attr("data-group"), 10);
-
-            if (!groups[id]) {
-                groups[id] = [];
-            }
-
-            groups[id].push(this);
-        });
-
-        $.each(groups, function () {
-            $(this).magnificPopup({
-                type: "image",
-                closeOnContentClick: true,
-                closeBtnInside: false,
-                gallery: {
-                    enabled: true,
-                },
-            });
-        });
-    }
-
     function dynamicCurrentMenuClass(selector) {
         let FileName = window.location.href.split("/").reverse()[0];
 
@@ -70,22 +35,10 @@
         dynamicCurrentMenuClass(mainNavUL);
     }
 
-    if ($(".service-sidebar__nav").length) {
-        let mainNavUL = $(".service-sidebar__nav");
-        dynamicCurrentMenuClass(mainNavUL);
-    }
-
     if ($(".main-menu").length && $(".mobile-nav__container").length) {
         let navContent = document.querySelector(".main-menu").innerHTML;
         let mobileNavContainer = document.querySelector(".mobile-nav__container");
         mobileNavContainer.innerHTML = navContent;
-    }
-
-    if ($(".sticky-header").length) {
-        $(".sticky-header")
-            .clone()
-            .insertAfter(".sticky-header")
-            .addClass("sticky-header--cloned");
     }
 
     if ($(".mobile-nav__container .main-menu__list").length) {
@@ -96,7 +49,7 @@
             let self = $(this);
             let toggleBtn = document.createElement("BUTTON");
             toggleBtn.setAttribute("aria-label", "dropdown toggler");
-            toggleBtn.innerHTML = "<i class='fa fa-angle-down'></i>";
+            toggleBtn.innerHTML = "<i class='icon-angle-down'></i>";
             self.append(function () {
                 return toggleBtn;
             });
@@ -126,12 +79,30 @@
             $("body").toggleClass("locked");
         });
     }
-    if ($(".mini-cart__toggler").length) {
-        $(".mini-cart__toggler").on("click", function (e) {
+
+    if ($(".sidebar-nav__toggler").length) {
+        $(".sidebar-nav__toggler").on("click", function (e) {
             e.preventDefault();
-            $(".mini-cart").toggleClass("expanded");
-            $(".mobile-nav__wrapper").removeClass("expanded");
+            $(".main-header-sidebar").toggleClass("isActive");
             $("body").toggleClass("locked");
+        });
+    }
+    if ($(".main-header-sidebar__toggler").length) {
+        $(".main-header-sidebar__toggler").on("click", function (e) {
+            e.preventDefault();
+            $(".main-header-sidebar").removeClass("isActive");
+            $("body").toggleClass("locked");
+        });
+    }
+
+    if ($(".video-popup").length) {
+        $(".video-popup").magnificPopup({
+            type: "iframe",
+            mainClass: "mfp-fade",
+            removalDelay: 160,
+            preloader: true,
+
+            fixedContentPos: false,
         });
     }
 
